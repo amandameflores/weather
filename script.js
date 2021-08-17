@@ -31,6 +31,8 @@ function showInfo(json) {
     showWarning('');
 
     document.querySelector('.resultado').style.display = 'block';
+
+    document.querySelector('.titulo').innerHTML = `${json.name}, ${json.country}`;
 }
 
 function showWarning(msg){
