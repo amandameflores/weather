@@ -38,7 +38,7 @@ function showInfo(json) {
 
     document.querySelector('.temp img').setAttribute('src',`http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
 
-    document.querySelector('.ventoPonto').style.transform = `rotate(xdeg)`;
+    document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle-90}deg)`;
 }
 
 function showWarning(msg){
