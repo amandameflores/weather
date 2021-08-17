@@ -12,12 +12,23 @@ document.querySelector('.busca').addEventListener('submit', async (event)=>{
         let json = await results.json();
 
         if (json.cod === 200){
+            showInfo({
+                name: json.name,
+                country: json.sys.country,
+                temp: json.main.temp,
+                tempIcon: json.weather[0].icon,
+                
+            });
 
         } else {
             showWarning('Não foi possível encontrar essa localização.');
         } 
     }
 });
+
+function showInfo(json) {
+
+}
 
 function showWarning(msg){
     document.querySelector('.aviso').innerHTML = msg;
