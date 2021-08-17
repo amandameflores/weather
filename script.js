@@ -28,7 +28,9 @@ document.querySelector('.busca').addEventListener('submit', async (event)=>{
 });
 
 function showInfo(json) {
+    showWarning('');
 
+    document.querySelector('.resultado').style.display = 'block';
 }
 
 function showWarning(msg){
