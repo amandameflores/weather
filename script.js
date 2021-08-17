@@ -3,5 +3,11 @@ document.querySelector('.busca').addEventListener('submit', (event)=>{
 
     let input = document.querySelector('#searchInput').value;
 
-    console.log(input);
+    if (input !== '') {
+
+    }
 });
+
+function showWarning(msg){
+    document.querySelector('.aviso').innerHTML = msg;
+}
